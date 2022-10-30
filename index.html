@@ -1,1 +1,138 @@
-测试的页面
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no"
+    />
+    <title>证书详情</title>
+    <script>
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt =
+            "orientationchange" in window ? "orientationchange" : "resize",
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 20 * (clientWidth / 375) + "px";
+          };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+      })(document, window);
+    </script>
+    <style>
+      /**vue防闪烁，延迟渲染**/
+      [v-cloak] {
+        display: none;
+      }
+
+      .zs_detail {
+        font-size: 1.2rem;
+        color: #d60b04;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .certificate_detail {
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+      }
+      .zs-float-l {
+        float: left;
+      }
+      table,
+      table tr th,
+      table tr td {
+        border: 1px solid rgb(211, 211, 211);
+        font-size: 0.7rem;
+      }
+      table {
+        width: 16rem !important;
+        border: 2px solid rgb(211, 211, 211);
+        min-height: 25px;
+        line-height: 35px;
+        border-collapse: collapse;
+        padding: 2px;
+        color: #ae0239;
+        background-color: #ffffff;
+      }
+      table tr td {
+        padding-left: 20px;
+      }
+      table tr td img {
+        width: 10rem;
+        height: 10rem;
+      }
+      .PC-class .zs_detail {
+        font-size: 28px;
+      }
+      .PC-class table,
+      table tr th,
+      table tr td {
+        font-size: 16px;
+      }
+      .PC-class table {
+        width: 100% !important;
+      }
+      .PC-class table tr td img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" class="PC-class">
+      <div id="certificate" style="display: none">ZW202006334</div>
+      <!--证书详情-->
+      <div class="zs_detail">证书详情</div>
+      <div id="certificate_detail" class="certificate_detail">
+        <table align="center">
+          <tbody>
+            <tr style="border: 1px red solid">
+              <td>
+                活动：湖北省第十五届“教育技术理论与实践”征文暨第十一届全国教育技术论文省级评选活动
+              </td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>主办单位：湖北省电化教育馆《教育技术导刊》杂志社</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>年份：2020</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>获奖者：何望</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>证书编号：ZW202006334</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>学校：武汉市常青树实验学校</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>正文： 三等奖</td>
+            </tr>
+            <tr style="border: 1px red solid">
+              <td>
+                <span class="zs-float-l">证书二维码：</span>
+                <img src="./img/code.png" alt="" />
+              </td>
+            </tr>
+            <tr style="border: 1px red solid"></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      document.write(
+        '<script src="/static/resources/js/award_detail.js?rnd=' +
+          Math.random() +
+          '"><' +
+          "/script>"
+      );
+    </script>
+  </body>
+</html>
